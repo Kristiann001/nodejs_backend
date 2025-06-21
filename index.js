@@ -1,7 +1,9 @@
-const express = require("express")
+const express = require("express");
+const studentroutes = require("./Routes/studentroute");
 
 const app = express();
+app.use(studentroutes);
 
-app.listen(process.env.port || 4000, function(){
-    console.log("Now Listening for requests on http://localhost:4000");
-})
+app.listen(process.env.port || 4000, function () {
+  console.log("Now Listening for requests on http://localhost:4000");
+});
